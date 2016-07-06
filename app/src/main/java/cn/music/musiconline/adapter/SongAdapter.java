@@ -34,7 +34,7 @@ public class SongAdapter extends BasicAdapter<CloudSongs.Result.Song> implements
             holder.tvSongFirstLetter = (TextView) convertView.findViewById(R.id.song_tv_firstletter);
             holder.ivSongPic = (ImageView) convertView.findViewById(R.id.song_iv_header);
             holder.tvSongName = (TextView) convertView.findViewById(R.id.song_tv_songname);
-            holder.tvSongName = (TextView) convertView.findViewById(R.id.song_tv_songartists);
+            holder.tvSongArtists = (TextView) convertView.findViewById(R.id.song_tv_songartists);
             convertView.setTag(holder);
         }else {
             holder = (ViewHolder) convertView.getTag();
@@ -42,7 +42,7 @@ public class SongAdapter extends BasicAdapter<CloudSongs.Result.Song> implements
         holder.tvSongFirstLetter.setText(song.getAlbum().getName().toLowerCase(Locale.CHINA));
         holder.ivSongPic.setImageResource(R.mipmap.ic_launcher);
         holder.tvSongName.setText(song.getAlbum().getName());
-        holder.tvSongArtists.setText(song.getArtists().get(position).getName());
+        holder.tvSongArtists.setText(song.getArtists().get(0).getName().toString());
 
         int section = getPositionForSection(position);
         int pos = getSectionForPosition(section);
