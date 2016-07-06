@@ -159,6 +159,7 @@ public class MainActivity extends BaseActivity implements Conts, View.OnClickLis
         ivHeaderLeft.setOnClickListener(this);
         ivHeaderRight.setOnClickListener(this);
 
+        etSlidingMenu.setOnClickListener(this);
         btnSlidingMenu.setOnClickListener(this);
     }
 
